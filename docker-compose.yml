@@ -2,8 +2,8 @@ version: "3"
 services:
   client:
     build: .
-    image: spa_angular_ts_hello-world:starter
-    container_name: spa_angular_ts_hello-world_starter
+    image: spa_angular_ts_hello-world:basic-authn
+    container_name: spa_angular_ts_hello-world_basic-authn
     ports:
       - 4040:4040
       - 6060:6060

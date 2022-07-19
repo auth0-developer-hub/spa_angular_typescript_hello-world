@@ -3,12 +3,15 @@
     <h1 id="page-title" class="content__title">Profile Page</h1>
     <div class="content__body">
       <p id="page-description">
-        <span
-          ><strong
-            >Only authenticated users should access this page.</strong
-          ></span
-        >
+        <span>
+          You can use the <strong>ID Token</strong> to get the profile
+          information of an authenticated user.
+        </span>
+        <span>
+          <strong>Only authenticated users can access this page.</strong>
+        </span>
       </p>
+
       <ng-container *ngIf="user$ | async as user">
         <div class="profile-grid">
           <div class="profile__header">
