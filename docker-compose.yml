@@ -1,0 +1,11 @@
+version: "3"
+services:
+  client:
+    build: .
+    image: spa_angular_ts_hello-world:starter
+    container_name: spa_angular_ts_hello-world_starter
+    ports:
+      - 4040:4040
+      - 6060:6060
+    env_file:
+      - .env
