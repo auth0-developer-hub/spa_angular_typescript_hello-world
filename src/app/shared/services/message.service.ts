@@ -31,12 +31,13 @@ export class MessageService {
     );
   };
 
-  getProtectedResource = (): Observable<ApiResponse> => {
+  getProtectedResource = (accessToken: string): Observable<ApiResponse> => {
     const config: RequestConfig = {
       url: `${env.api.serverUrl}/api/messages/protected`,
       method: 'GET',
       headers: {
         'content-type': 'application/json',
+        authorization: `Bearer ${accessToken}`,
       },
     };
 
