@@ -1,0 +1,44 @@
+{
+  "name": "spa-angular-typescript-hello-world",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "env": "ts-node set-env.ts",
+    "start": "npm run env && ng serve",
+    "build": "npm run env && ng build",
+    "watch": "ng build --watch --configuration development",
+    "api": "json-server --host 0.0.0.0 --port 6060 --watch json-server/db.json --routes json-server/routes.json"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^15.0.0",
+    "@angular/common": "^15.0.0",
+    "@angular/compiler": "^15.0.0",
+    "@angular/core": "^15.0.0",
+    "@angular/forms": "^15.0.0",
+    "@angular/platform-browser": "^15.0.0",
+    "@angular/platform-browser-dynamic": "^15.0.0",
+    "@angular/router": "^15.0.0",
+    "axios": "^0.27.2",
+    "rxjs": "~7.5.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^15.0.0",
+    "@angular/cli": "~15.0.0",
+    "@angular/compiler-cli": "^15.0.0",
+    "@types/jasmine": "~4.0.0",
+    "dotenv": "^16.0.1",
+    "jasmine-core": "~4.1.0",
+    "json-server": "^0.17.0",
+    "karma": "~6.3.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.0.0",
+    "karma-jasmine-html-reporter": "~1.7.0",
+    "prettier": "^2.7.1",
+    "ts-node": "^10.9.1",
+    "typescript": "~4.8.4"
+  }
+}
