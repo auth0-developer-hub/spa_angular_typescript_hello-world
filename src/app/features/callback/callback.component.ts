@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
+  selector: 'app-callback',
+  templateUrl: './callback.component.html',
 })
-export class AppComponent {
-  isAuth0Loading$ = this.auth.isLoading$;
+export class CallbackComponent {
+  error$ = this.auth.error$;
 
   constructor(private auth: AuthService) {}
 }

@@ -1,1 +1,9 @@
-<div class="mobile-nav-bar__buttons"></div>
+<div class="mobile-nav-bar__buttons">
+  <app-logout-button
+    *ngIf="isAuthenticated$ | async; else loggedOut"
+  ></app-logout-button>
+  <ng-template #loggedOut>
+    <app-signup-button></app-signup-button>
+    <app-login-button></app-login-button>
+  </ng-template>
+</div>
