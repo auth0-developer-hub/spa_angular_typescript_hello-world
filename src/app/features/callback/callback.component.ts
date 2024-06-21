@@ -2,11 +2,10 @@ import { Component, inject } from '@angular/core';
 import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
+  selector: 'app-callback',
+  templateUrl: './callback.component.html',
 })
-export class AppComponent {
+export class CallbackComponent {
   private auth = inject(AuthService);
-  isAuth0Loading$ = this.auth.isLoading$;
-
+  error$ = this.auth.error$;
 }

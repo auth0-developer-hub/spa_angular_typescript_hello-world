@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { MessageService } from '@app/core';
 
 @Component({
@@ -6,9 +6,8 @@ import { MessageService } from '@app/core';
   templateUrl: './public.component.html',
 })
 export class PublicComponent implements OnInit {
+  private messageService = inject(MessageService)
   message = '';
-
-  constructor(public messageService: MessageService) {}
 
   ngOnInit(): void {
     this.messageService.getPublicResource().subscribe((response) => {
